@@ -1,0 +1,163 @@
+// Variable Declarations
+$primary-color: #f8f9fa;
+$secondary-color: #7245df;
+$tertiary-color: #eae5f7;
+$quaternary-color: #f73859;
+$text-primary: #000000;
+$text-secondary: #6c757d;
+// ----------------------
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color;
+  a {
+    text-decoration: none;
+  }
+}
+
+// Global Style
+.navbar {
+  .navbar-text {
+    color: $secondary-color;
+  }
+}
+
+.btn {
+  padding: 0.5em 2em 0.5em 2em;
+  border-radius: 1em;
+}
+
+.btn-primary {
+  background-color: $quaternary-color;
+  color: $tertiary-color;
+  border: none;
+  &:hover {
+    background-color: $quaternary-color;
+    color: $tertiary-color;
+  }
+}
+
+// home start
+.home {
+  height: 51em;
+  width: 100%;
+  background-image: url(../img/background.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  a {
+    color: $primary-color;
+  }
+  .row {
+    height: 46em;
+    grid-row: auto;
+    .box {
+      min-width: auto;
+      max-width: 25em;
+      height: 10em;
+      background-color: $tertiary-color;
+      border-radius: 4em;
+      img {
+        min-width: auto;
+        max-width: 20em;
+        height: 25em;
+        margin-top: -15em;
+      }
+    }
+  }
+}
+
+// trust start
+.trust {
+  height: auto;
+  color: $text-secondary;
+  h1 {
+    color: $secondary-color;
+  }
+}
+
+// step start
+.step {
+  height: auto;
+  background-color: $tertiary-color;
+  .card {
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    padding: 0.5em;
+    p {
+      color: $text-secondary;
+    }
+  }
+}
+
+// about start
+.about {
+  img {
+    min-width: auto;
+    max-width: 20em;
+  }
+}
+
+// contact start
+.contact {
+  .col-sm-12,
+  .col-md-9 {
+    height: auto;
+    background-color: $tertiary-color;
+    .row {
+      height: 25em;
+      margin-left: -3em;
+      .col-md-5 {
+        border: 1em solid $tertiary-color;
+        border-radius: 1em;
+      }
+    }
+  }
+  p {
+    display: inline;
+    color: $text-secondary;
+    margin-left: 1em;
+  }
+}
+
+// footer start
+.footer {
+  background-color: $secondary-color;
+  color: $primary-color;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    .row {
+      flex-direction: column-reverse;
+      margin-top: 22%;
+    }
+    .navbar-collapse {
+      li a {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  // step start
+  .step {
+    background-size: cover;
+  }
+
+  // contact start
+  .contact {
+    .col-sm-12,
+    .col-md-9 {
+      .row {
+        height: auto;
+        margin-left: -1em;
+        .col-md-5 {
+          border: none;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
